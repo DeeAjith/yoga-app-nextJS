@@ -1,0 +1,38 @@
+// Use the Tailwind CSS theme colors
+.customModal {
+    background-color: #116d6ec2; // Use the primary color with opacity
+    position: fixed;
+    inset: 0px;
+  }
+  
+  .customModalContent {
+    position: relative;
+    /* Styles for the modal content */
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    color: text-primary; // Use Tailwind CSS theme colors
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: text-secondary; // Use Tailwind CSS theme colors
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .closeButton:hover,
+  .closeButton:focus,
+  .closeButton:active {
+    color: text-primary; // Change color on interaction
+  }
+  

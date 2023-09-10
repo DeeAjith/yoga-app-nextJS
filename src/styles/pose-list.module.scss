@@ -1,0 +1,80 @@
+@import './home.module.scss';
+
+.pose_list {
+  @apply flex flex-row flex-wrap justify-center gap-5;
+}
+
+.pose_card {
+  @apply w-1/4 lg:w-1/3 sm:w-1/2 bg-white  border-2 border-lighten-90 rounded-lg transition-transform transform duration-300 flex flex-col items-center justify-between;
+
+  .poseCardtop {
+    @apply p-5;
+  }
+
+  &:hover {
+    @apply translate-y-[-2px];
+  }
+
+  img {
+    @apply max-w-full h-auto rounded-lg;
+    // mix-blend-mode: luminosity;
+    // filter: grayscale(1) brightness(.95);
+  }
+
+  h2 {
+    @apply mt-10 text-2xl font-bold;
+  }
+
+  p {
+    @apply mt-2 text-gray-600;
+  }
+
+  .poseDescription {
+    max-height: 70px;
+    /* Control the initial height */
+    overflow: hidden;
+    text-align: center;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .poseDescription.expanded {
+    max-height: none;
+    /* Expand to show full content */
+  }
+
+  .read_more {
+    @apply mt-2 bg-secondary text-white py-4 px-5 border-none rounded cursor-pointer border-2 border-primary-light;
+
+    &:hover {
+      @apply bg-opacity-90;
+    }
+  }
+}
+
+.load_more {
+  @apply flex justify-center w-full mt-10;
+
+  .load_more_button {
+    @apply block w-full max-w-[200px] mx-auto py-3 px-4 bg-primary-light text-black uppercase font-bold border-none rounded cursor-pointer transition-bg duration-300;
+
+    &:hover {
+      @apply bg-opacity-90 text-black;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+
+  /* Tablet styles: 3 cards per row */
+  .pose_card {
+    @apply w-1/3 lg:w-1/2 sm:w-1/2;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Phone styles: 1 card per row */
+  .pose_card {
+    @apply w-full;
+  }
+}

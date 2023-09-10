@@ -1,0 +1,13 @@
+@import './home.module.scss';
+
+.searchBar {
+  @apply flex justify-center items-center mb-10; // Use Tailwind classes for flex and margin-bottom
+}
+
+.customInput {
+  @apply p-2 border border-gray-300 rounded text-base w-full transition duration-200; // Use Tailwind classes for padding, border, etc.
+
+  &:focus {
+    @apply border-primary shadow-none; // Use Tailwind classes for focus styles
+  }
+}
