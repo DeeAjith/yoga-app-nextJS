@@ -6,11 +6,10 @@ import PoseList from "./components/PoseList";
 
 export default function Home(props) {
   const [data, setData] = useState([]);
-
   // Function to fetch the data from the API
   async function fetchData() {
     try {
-      const response = await fetch(process.env.YOGA_API || "http://localhost:8000/v1/poses");
+      const response = await fetch(process.env.YOGA_API);
       const data = await response.json();
       return data;
     } catch (error) {
@@ -34,18 +33,18 @@ export default function Home(props) {
 
   const filteredPoses = data
     ? data.filter(
-        (pose) =>
-          pose?.english_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          pose?.sanskrit_name_adapted
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()) ||
-          pose?.sanskrit_name
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()) ||
-          pose?.translation_name
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase())
-      )
+      (pose) =>
+        pose?.english_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        pose?.sanskrit_name_adapted
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase()) ||
+        pose?.sanskrit_name
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase()) ||
+        pose?.translation_name
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase())
+    )
     : [];
   return (
     <div className={styles.App}>
@@ -56,7 +55,7 @@ export default function Home(props) {
         <p className="mb-6 text-center text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
           Explore Tranquility: Yoga Poses for Balance and Wellness
         </p>
-        
+
         <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} />
         {data ? (
           <PoseList poses={filteredPoses} />
