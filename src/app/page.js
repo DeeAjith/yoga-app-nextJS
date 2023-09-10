@@ -21,7 +21,6 @@ export default function Home(props) {
     }
   }
 
-
   // Function to fetch and set the data
   async function fetchAndSetData() {
     const refreshedData = await fetchData();
