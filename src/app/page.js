@@ -82,7 +82,7 @@ export default function Home(props) {
           {isLoading ? <div className="animate-pulse w-full flex justify-center">
             <div className="bg-gray-400 dark:bg-gray-800 rounded-lg w-44 h-3"></div>
           </div>
-            : <h1 className="mb-4 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            : <h1 className="mb-4 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-100">
               Yoga Poses
             </h1>
           }

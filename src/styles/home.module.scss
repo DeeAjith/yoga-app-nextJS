@@ -15,7 +15,7 @@
 
 .title {
     margin-block: 2rem;
-    @apply text-primary-50; // Use Tailwind CSS theme colors
+    @apply text-gray-50; // Use Tailwind CSS theme colors
     font-size: 3rem;
     text-align: center;
 
@@ -183,5 +183,5 @@ input:checked+.slider:before {
 }
 
 .noData {
-    @apply text-white;
+    @apply text-gray-100;
 }

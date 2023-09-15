@@ -5,7 +5,7 @@
 }
 
 .pose_card {
-  @apply w-1/4 lg:w-1/3 sm:w-1/2 bg-white  border-2 border-lighten-90 rounded-lg transition-transform transform duration-300 flex flex-col items-center justify-between;
+  @apply w-1/4 lg:w-1/3 sm:w-1/2 bg-gray-100  border-2 border-lighten-90 rounded-lg transition-transform transform duration-300 flex flex-col items-center justify-between;
 
   .poseCardtop {
     @apply p-5;
@@ -43,7 +43,7 @@
   }
 
   .read_more {
-    @apply mt-2 bg-secondary text-white py-4 px-5 border-none rounded cursor-pointer border-2 border-primary-50;
+    @apply mt-2 bg-secondary text-gray-100 py-4 px-5 border-none rounded cursor-pointer border-2 border-gray-50;
 
     &:hover {
       @apply bg-opacity-90;
@@ -55,7 +55,7 @@
   @apply flex justify-center w-full mt-10;
 
   .load_more_button {
-    @apply block w-full max-w-[200px] mx-auto py-3 px-4 bg-primary-50 text-black uppercase font-bold border-none rounded cursor-pointer transition-bg duration-300;
+    @apply block w-full max-w-[200px] mx-auto py-3 px-4 bg-gray-50 text-black uppercase font-bold border-none rounded cursor-pointer transition-bg duration-300;
 
     &:hover {
       @apply bg-opacity-90 text-black;

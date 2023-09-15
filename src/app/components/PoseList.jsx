@@ -32,30 +32,30 @@ const PoseList = ({ poses }) => {
       className="group/card lg:w-[calc(100%/4-1.25rem)] md:w-[calc(100%/3-1.25rem)] sm:w-[calc(100%/2-1rem)]"
       key={pose.id}
     >
-      <div className="bg-white w-full h-full md:m-0 shadow-md border border-gray-200 rounded-2xl dark:bg-gray-800 dark:border-gray-700">
-        <a href="#" className="">
+      <div className="bg-gray-100 w-full h-full md:m-0 shadow-md border border-gray-200 rounded-2xl dark:bg-gray-800 dark:border-gray-700 lg:hover:scale-[1.01]">
+        <div onClick={() => openModal(pose)} className="cursor-pointer">
           <img
             className="rounded-t-2xl px-8 py-5 bg-accent card-hover:scale-105"
             src={pose.url_png}
             alt={pose.english_name}
           />
-        </a>
+        </div>
         <div className="p-5 flex flex-col items-start">
-          <a href="#">
-            <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">
+          <div onClick={() => openModal(pose)} className="cursor-pointer">
+            <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-gray-100">
               {pose.english_name}
             </h5>
-          </a>
+          </div>
           <p className="font-normal text-gray-700 mb-3 dark:text-gray-400">
             {pose.sanskrit_name}
           </p>
           <button
             onClick={() => openModal(pose)}
-            className="group mt-auto text-white bg-black dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
+            className="group mt-auto text-gray-100 bg-black dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-900 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
           >
             Read more
             <ArrowRight
-              className="ml-2 stroke-white dark:stroke-gray-50 group-hover:stroke-white group-hover:translate-x-1"
+              className="ml-2 stroke-gray-100 dark:stroke-gray-50 group-hover:stroke-gray-100 group-hover:translate-x-1"
               size={18}
             />
           </button>
@@ -70,7 +70,7 @@ const PoseList = ({ poses }) => {
       {visiblePoses < poses.length && (
         <div className={style.load_more}>
           <button
-            className="group bg-white  text-gray-700 dark:text-white shadow-md border border-gray-200 hover:bg-gray-800 hover:text-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-4 py-2 text-center inline-flex items-center"
+            className="group bg-gray-100  text-gray-700 dark:text-gray-100 shadow-md border border-gray-200 hover:bg-gray-800 hover:text-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-900 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-lg px-4 py-2 text-center inline-flex items-center"
             onClick={handleLoadMore}
           >
             Load More

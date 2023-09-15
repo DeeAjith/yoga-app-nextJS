@@ -5,7 +5,7 @@ const ShimmerCard = () => {
     <div
       className={`w-full lg:w-[calc(100%/4-1.25rem)] md:w-[calc(100%/3-1.25rem)] sm:w-[calc(100%/2-1rem)]`}
     >
-      <div className={`animate-pulse bg-white w-full h-full md:m-0 shadow-md border border-gray-200 rounded-2xl dark:bg-gray-800 dark:border-gray-700`}>
+      <div className={`animate-pulse bg-gray-100 w-full h-full md:m-0 shadow-md border border-gray-200 rounded-2xl dark:bg-gray-800 dark:border-gray-700`}>
         <div className={`bg-gray-300 dark:bg-gray-700 rounded-t-lg w-full h-[320px]`}></div>
         <div className={`p-5 flex flex-col items-start`}>
           <div className={`bg-gray-300 dark:bg-gray-700 rounded-lg w-20 h-3`}></div>

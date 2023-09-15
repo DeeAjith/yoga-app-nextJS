@@ -8,15 +8,18 @@
   --primary-color-light: #1db3b5;
   --secondary-color: #321E1E;
   --secondary-color-light: #b06e6e;
-  --dark-bg-color: #121212; /* Dark mode background color */
-  --light-bg-color: #FFFFFF; /* Light mode background color */
+  --dark-bg-color: #121212;
+  /* Dark mode background color */
+  --light-bg-color: #FFFFFF;
+  /* Light mode background color */
 }
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
     /* Dark mode background */
-    background-color: var(--dark-bg-color); /* Use the dark background color */
+    @apply bg-primary-100 dark:bg-gray-900;
+    /* Use the dark background color */
     color: white;
   }
 }
@@ -25,8 +28,10 @@
 @media (prefers-color-scheme: light) {
   body {
     /* Light mode background */
-    background-color: var(--light-bg-color); /* Use the light background color */
-    color: #222; /* Default text color for light mode */
+    background-color: var(--light-bg-color);
+    /* Use the light background color */
+    color: #222;
+    /* Default text color for light mode */
   }
 }
 

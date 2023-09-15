@@ -8,7 +8,7 @@
 .customModalContent {
   position: relative;
   /* Styles for the modal content */
-  @apply bg-white w-full md:m-0 shadow-md border border-gray-200 rounded-2xl dark:bg-gray-800 dark:border-gray-700;
+  @apply bg-gray-100 w-full md:m-0 shadow-md border border-gray-200 rounded-2xl dark:bg-gray-800 dark:border-gray-700;
   border-radius: 8px;
   width: 80%;
   max-width: 600px;
