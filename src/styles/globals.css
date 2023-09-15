@@ -5,7 +5,9 @@
 /* Define custom color scheme */
 :root {
   --primary-color: #116D6E;
+  --primary-color-light: #1db3b5;
   --secondary-color: #321E1E;
+  --secondary-color-light: #b06e6e;
   --dark-bg-color: #121212; /* Dark mode background color */
   --light-bg-color: #FFFFFF; /* Light mode background color */
 }

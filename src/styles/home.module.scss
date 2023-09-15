@@ -15,7 +15,7 @@
 
 .title {
     margin-block: 2rem;
-    @apply text-primary-light; // Use Tailwind CSS theme colors
+    @apply text-primary-50; // Use Tailwind CSS theme colors
     font-size: 3rem;
     text-align: center;
 
@@ -42,7 +42,7 @@
 
 .title {
     a {
-        color: text-primary; // Use Tailwind CSS theme colors
+        @apply text-primary; // Use Tailwind CSS theme colors
         text-decoration: none;
 
         &:hover,

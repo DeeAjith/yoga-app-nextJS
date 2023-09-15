@@ -43,7 +43,7 @@
   }
 
   .read_more {
-    @apply mt-2 bg-secondary text-white py-4 px-5 border-none rounded cursor-pointer border-2 border-primary-light;
+    @apply mt-2 bg-secondary text-white py-4 px-5 border-none rounded cursor-pointer border-2 border-primary-50;
 
     &:hover {
       @apply bg-opacity-90;
@@ -55,7 +55,7 @@
   @apply flex justify-center w-full mt-10;
 
   .load_more_button {
-    @apply block w-full max-w-[200px] mx-auto py-3 px-4 bg-primary-light text-black uppercase font-bold border-none rounded cursor-pointer transition-bg duration-300;
+    @apply block w-full max-w-[200px] mx-auto py-3 px-4 bg-primary-50 text-black uppercase font-bold border-none rounded cursor-pointer transition-bg duration-300;
 
     &:hover {
       @apply bg-opacity-90 text-black;

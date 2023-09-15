@@ -11,7 +11,7 @@ const SearchBar = ({ searchTerm, onSearch }) => {
       <input
         type="text"
         placeholder="Search poses..."
-        className={`placeholder:normal placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-primary-light focus:ring-primary-light focus:ring-1 sm:text-sm`}
+        className={`placeholder:normal placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-primary-50 focus:ring-primary-light focus:ring-1 sm:text-sm`}
         value={searchTerm}
         onChange={(e) => onSearch(e.target.value)}
       />

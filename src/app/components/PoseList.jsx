@@ -70,7 +70,7 @@ const PoseList = ({ poses }) => {
       {visiblePoses < poses.length && (
         <div className={style.load_more}>
           <button
-            className="group bg-white  text-gray-50 dark:text-white shadow-md border border-gray-200 hover:bg-gray-400 hover:text-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-4 py-2 text-center inline-flex items-center"
+            className="group bg-white  text-gray-700 dark:text-white shadow-md border border-gray-200 hover:bg-gray-800 hover:text-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-4 py-2 text-center inline-flex items-center"
             onClick={handleLoadMore}
           >
             Load More
