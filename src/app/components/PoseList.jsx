@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "@/styles/pose-list.module.scss";
 import PoseModal from "./PoseModal"; // Import the PoseModal component
 import { ArrowRight, RotateCw } from "react-feather";
@@ -8,8 +8,15 @@ const PoseList = ({ poses }) => {
   const [expandedId, setExpandedId] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalPose, setModalPose] = useState(null);
-  const [visiblePoses, setVisiblePoses] = useState(4); // Initial number of visible poses
-
+  const [visiblePoses, setVisiblePoses] = useState(getInitialVisiblePoses()); // Initial number of visible poses
+  // Function to determine the initial number of visible poses based on screen width
+  function getInitialVisiblePoses() {
+    if (window.innerHeight < 768) {
+      return 4; // You can set a different value for smaller screens if needed
+    } else {
+      return 8;
+    }
+  }
   const toggleDescription = (id) => {
     setExpandedId(id);
   };
@@ -27,6 +34,22 @@ const PoseList = ({ poses }) => {
   const handleLoadMore = () => {
     setVisiblePoses((prevVisiblePoses) => prevVisiblePoses + 5);
   };
+
+  // Update visiblePoses when the screen width changes
+  useEffect(() => {
+    function handleResize() {
+      setVisiblePoses(getInitialVisiblePoses());
+    }
+    console.log(handleResize)
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("load", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("load", handleResize);
+    };
+  }, []);
+
   const poseCards = poses.slice(0, visiblePoses).map((pose) => (
     <div
       className="group/card lg:w-[calc(100%/4-1.25rem)] md:w-[calc(100%/3-1.25rem)] sm:w-[calc(100%/2-1rem)]"

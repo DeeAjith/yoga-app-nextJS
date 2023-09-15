@@ -1,6 +1,8 @@
 // Use the Tailwind CSS theme colors
 .container {
     padding: 0 2rem;
+    max-width: 1366px;
+    margin-inline: auto;
 }
 
 .main {
@@ -173,7 +175,7 @@ input:checked+.slider {
 }
 
 input:focus+.slider {
-   @apply ring-1 ring-primary; 
+    @apply ring-1 ring-primary;
 }
 
 input:checked+.slider:before {
