@@ -6,7 +6,7 @@ const SearchBar = ({ searchTerm, onSearch }) => {
   return (
     <div className={`${style.searchBar} relative block`}>
       <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-        <Search className="h-5 w-5 stroke-slate-300" size={18} />
+        <Search className="w-5 h-5 stroke-slate-300" size={18} />
       </span>
       <input
         type="text"
@@ -15,6 +15,7 @@ const SearchBar = ({ searchTerm, onSearch }) => {
         value={searchTerm}
         onChange={(e) => onSearch(e.target.value)}
       />
+      
     </div>
   );
 };
